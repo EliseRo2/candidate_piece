@@ -1,0 +1,109 @@
+/*This is a CSS File*/
+
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+}
+
+body {
+    background-color: white; /* Sets the background color */
+} 
+
+figure {
+    max-width: 700px; /* Sets the maximum width of the figure */
+}
+
+img {
+    max-width: 100%; /* Sets the image size at 100 percent of the maximum width */
+}
+
+.content {
+    margin: 20px;
+    max-width: 750px;
+    font-family: Mulish; /* Sets the imported font */
+}
+
+h2, h1 {
+    color: steelblue; /* Sets the color of the main headline and the sub-headings on mobile to steelblue */
+}
+
+h1 {
+    border-style: solid; /* Puts a solid border around the headline */
+    border-width: 2px; /* Sets the specific width of the border */
+    padding: 10px; /* Puts 10px of space between the words and the border */
+    text-align: center; /* Aligns the headline in the center of the border or box */
+}
+
+h2 {
+    margin-bottom: -10px;
+    text-transform: uppercase;
+}
+
+.byline {
+    margin-bottom: -15px; /* Decreases the space between the byline and the date */
+}
+
+p {
+    line-height: 1.6; /* Adjusts the spacing between the lines in the paragraphs */
+}
+
+li {
+    line-height: 1.6; /*Adjusts the spacing between the list items in the first two sections*/
+}
+
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+.content {
+    max-width: 850px; /* Makes the maximum width of the website content larger on a desktop */
+    margin: auto;
+}
+
+body {
+    background-color: silver; /*Sets the background color on a desktop */
+}
+
+h1 {
+    border-width: 5px; /* Makes the border thickness larger on a desktop */
+}
+
+h2, h1 {
+    color: darkred; /* Sets the color of the headline and subheadings on a desktop to dark red */
+}
+
+
+/* All code should come above this bracket */
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
